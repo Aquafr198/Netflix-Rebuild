@@ -12,9 +12,8 @@
     --transition-speed: 0.3s;
   }
   
-  /* Solution pour masquer la scrollbar */
   html, body {
-    overflow: hidden !important; /* Empêche le défilement natif */
+    overflow: hidden !important;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -28,7 +27,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Le conteneur principal pour notre défilement personnalisé */
   #scroll-container {
     position: fixed;
     top: 0;
@@ -38,7 +36,6 @@
     overflow: hidden;
   }
   
-  /* Le contenu qui sera défilé par notre script */
   #scroll-content {
     position: absolute;
     top: 0;
@@ -48,7 +45,6 @@
     will-change: transform;
   }
   
-  /* Masquer les scrollbars sur tous les navigateurs */
   ::-webkit-scrollbar {
     display: none !important;
     width: 0 !important;
@@ -65,14 +61,12 @@
     -ms-overflow-style: none !important;
   }
   
-  /* Styles de base */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Styles d'animation pour le scroll */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -84,7 +78,6 @@
     transform: translateY(0);
   }
   
-  /* Optimisation du rendu */
   .header,
   .hero-content,
   .hero-video,
@@ -95,14 +88,12 @@
     will-change: transform, opacity;
   }
   
-  /* Conteneur principal */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
   
-  /* En-tête */
   .header {
     position: fixed;
     top: 0;
@@ -188,7 +179,6 @@
     cursor: pointer;
   }
   
-  /* Section Hero */
   .hero-section {
     position: relative;
     height: 100vh;
@@ -263,7 +253,6 @@
     box-shadow: 0 10px 20px rgba(26, 118, 255, 0.3);
   }
   
-  /* Sections générales */
   .section {
     padding: var(--section-padding);
   }
@@ -300,7 +289,6 @@
     margin: 0 auto;
   }
   
-  /* Grille de cartes */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -373,7 +361,6 @@
     transform: translateX(5px);
   }
   
-  /* Cartes de progression */
   .progress-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -423,7 +410,6 @@
     color: var(--text-color-muted);
   }
   
-  /* Grille de portfolio */
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -488,7 +474,6 @@
     transform: translateY(0);
   }
   
-  /* Catégories */
   .categories {
     display: flex;
     flex-wrap: wrap;
@@ -511,7 +496,6 @@
     color: white;
   }
   
-  /* Formulaires */
   form {
     width: 100%;
   }
@@ -538,7 +522,6 @@
     margin-top: 10px;
   }
   
-  /* Footer */
   .footer {
     background-color: var(--card-bg-color);
     padding: 60px 0 30px;
@@ -621,7 +604,6 @@
     font-size: 14px;
   }
   
-  /* Responsive */
   @media screen and (max-width: 992px) {
     .hero-content h1 {
       font-size: 42px;
@@ -674,7 +656,6 @@
     }
   }
   
-  /* Animation du chargement de page */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -688,7 +669,6 @@
     animation: fadeIn 0.3s ease-in;
   }
   
-  /* Styles pour les transitions de page */
   .page-transition {
     position: fixed;
     top: 0;
@@ -709,4 +689,3 @@
   .page-transition.exit {
     transform-origin: right;
   }
-  
